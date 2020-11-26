@@ -185,8 +185,8 @@ class EmailHandler extends ExceptionHandler
 
                 // if we're just making the cache key now we are not global throttling yet
                 return false;
-            }//end if
-        }//end if
+            }
+        }
     }
 
     /**
