@@ -18,20 +18,22 @@
                                 <td><strong>Environment:</strong></td>
                                 <td>{{ env('APP_ENV', 'unknown') }}</td>
                             </tr>
+                        @if($request)
                             <tr>
                                 <td><strong>Exception Url:</strong></td>
-                                <td>{!! $request->fullUrl() !!}</td>
+                                <td>{!! $request->fullUrl() ?? null !!}</td>
                             </tr>
                             <tr>
                                 <td><strong>Remote Host:</strong></td>
-                                <td>{!! $request->ip() !!}</td>
+                                <td>{!! $request->ip() ?? null !!}</td>
                             </tr>
 
-                        @if($request->input())
+                            @if($request->input())
                             <tr>
                                 <td><strong>Request:</strong></td>
                                 <td><pre>{!! print_r($request->input()) !!}</pre></td>
                             </tr>
+                            @endif
                         @endif
 
                         @if($agent)

@@ -1,5 +1,4 @@
 <?php
-
 return [
     /**
      * Configure the ErrorEmail service
