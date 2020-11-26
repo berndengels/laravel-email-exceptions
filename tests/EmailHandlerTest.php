@@ -931,6 +931,4 @@ class EmailHandlerTest extends TestCase
                                             ],
                ];
     }//end isInDontEmailListProvider()
-
 }//end class
-

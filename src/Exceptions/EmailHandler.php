@@ -114,7 +114,7 @@ class EmailHandler extends ExceptionHandler
      *
      * @param Throwable $exception
      */
-    protected function mailException(Throwable $exception )
+    protected function mailException(Throwable $exception)
     {
         $data = [
             'exception' => $exception,
@@ -126,7 +126,9 @@ class EmailHandler extends ExceptionHandler
         ];
 
         Mail::send(
-            'laravelEmailExceptions::emailException', $data, function ($message) {
+            'laravelEmailExceptions::emailException',
+            $data,
+            function ($message) {
 
                 $default = 'An Exception has been thrown on '.
                 config('app.name', 'unknown').' ('.config('app.env', 'unknown').')';
