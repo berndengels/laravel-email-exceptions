@@ -1,6 +1,6 @@
 {
     "name": "berndengels/laravel8-email-exceptions",
-    "description": "Email Exceptions from your laravel v7/8 application",
+    "description": "Email Exceptions from your laravel v8 application",
     "license": "MIT",
     "keywords": ["email", "exception", "laravel", "laravel-8-package", "exception-handling", "debugging"],
     "authors": [
