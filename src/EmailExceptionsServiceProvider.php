@@ -28,7 +28,6 @@ class EmailExceptionsServiceProvider extends ServiceProvider
             [__DIR__.'/views' => resource_path('views/vendor/laravelEmailExceptions')],
             'views'
         );
-
     }//end boot()
 
 
@@ -43,8 +42,5 @@ class EmailExceptionsServiceProvider extends ServiceProvider
             __DIR__.'/config/laravelEmailExceptions.php',
             'laravelEmailExceptions'
         );
-
     }//end register()
-
-
 }//end class
