@@ -13,8 +13,6 @@ to themselves whenever an exception is thrown in their application. Information 
 * File and Line Number
 * Stack Trace
 
-![Screenshot](https://cloud.githubusercontent.com/assets/7387512/22176626/047ac836-dfdd-11e6-9a91-bb99b98333ac.png)
-
 ## Table of Contents
 * [Installation](#installation)
 * [Configuration](#configuration)
