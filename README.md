@@ -44,7 +44,7 @@ use Bengels\LaravelEmailExceptions\Exceptions\EmailHandler as ExceptionHandler;
 ```
 
 ## Configuration
-To publish the config file and view run the following command
+To publish the config file, view and tests run the following command
 ```bash
 php artisan vendor:publish --provider="Bengels\LaravelEmailExceptions\EmailExceptionsServiceProvider"
 ```
