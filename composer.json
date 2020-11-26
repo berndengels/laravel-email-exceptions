@@ -41,5 +41,12 @@
                 "Bengels\\LaravelEmailExceptions\\EmailExceptionsServiceProvider"
             ]
         }
+    },
+    "repositories": {
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/berndengels/"
+        },
+        "packagist.org": false
     }
 }
