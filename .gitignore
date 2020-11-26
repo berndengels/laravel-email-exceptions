@@ -3,5 +3,4 @@
 .editorconfig
 .DStore
 /composer.lock
-/.travis.yml
 /.phpunit.result.cache
