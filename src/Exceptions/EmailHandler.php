@@ -312,7 +312,7 @@ class EmailHandler extends ExceptionHandler
      * @return DateTime
      * @throws Exception
      */
-    protected function getDateTimeMinutesFromNow($minutesToAdd=0)
+    protected function getDateTimeMinutesFromNow($minutesToAdd = 0)
     {
         $now = new DateTime();
 
