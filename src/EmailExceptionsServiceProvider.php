@@ -26,10 +26,6 @@ class EmailExceptionsServiceProvider extends ServiceProvider
             [__DIR__.'/views' => resource_path('views/vendor/laravelEmailExceptions')],
             'views'
         );
-        $this->publishes(
-            [__DIR__.'/tests' => base_path('tests/Unit')],
-            'tests'
-        );
     }
 
     /**
