@@ -10,6 +10,7 @@ use Illuminate\Support\ServiceProvider;
  */
 class EmailExceptionsServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap the application services.
      *
