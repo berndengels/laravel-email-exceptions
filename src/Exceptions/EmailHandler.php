@@ -6,11 +6,17 @@ use DateTime;
 use Mail;
 use Throwable;
 use Exception;
+use Jenssegers\Agent\Agent;
+use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class EmailHandler extends ExceptionHandler
 {
+    /**
+     * @var $agent Agent
+     */
+    protected $agent;
 
     /**
      * @var string global throttle cache key
@@ -111,12 +117,15 @@ class EmailHandler extends ExceptionHandler
      *
      * @param Throwable $exception
      */
-    protected function mailException(Throwable $exception)
+    protected function mailException(Throwable $exception )
     {
         $data = [
             'exception' => $exception,
-            'toEmail' => config('laravelEmailExceptions.ErrorEmail.toEmailAddress'),
+            'toEmail'   => config('laravelEmailExceptions.ErrorEmail.toEmailAddress'),
             'fromEmail' => config('laravelEmailExceptions.ErrorEmail.fromEmailAddress'),
+            'request'   => request(),
+            'agent'     => new Agent(),
+            'user'      => auth()->check() ? auth()->user() : null,
         ];
 
         Mail::send('laravelEmailExceptions::emailException', $data, function ($message) {
