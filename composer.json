@@ -42,6 +42,9 @@
             ]
         }
     },
+    "scripts": {
+        "run-tests": "./vendor/bin/phpunit"
+    },
     "repositories": {
         "private-packagist": {
             "type": "composer",
