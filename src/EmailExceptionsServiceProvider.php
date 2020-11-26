@@ -4,14 +4,13 @@ namespace Bengels\LaravelEmailExceptions;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class EmailExceptionsServiceProvider
+ *
+ * @package Bengels\LaravelEmailExceptions
+ */
 class EmailExceptionsServiceProvider extends ServiceProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
 
     /**
      * Bootstrap the application services.
@@ -21,10 +20,17 @@ class EmailExceptionsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/views', 'laravelEmailExceptions');
+        $this->publishes(
+            [__DIR__.'/config/laravelEmailExceptions.php' => config_path('laravelEmailExceptions.php')],
+            'config'
+        );
+        $this->publishes(
+            [__DIR__.'/views' => resource_path('views/vendor/laravelEmailExceptions')],
+            'views'
+        );
 
-        $this->publishes([__DIR__.'/config/laravelEmailExceptions.php' => config_path('laravelEmailExceptions.php')], 'config');
-        $this->publishes([__DIR__.'/views' => resource_path('views/vendor/laravelEmailExceptions')], 'views');
-    }
+    }//end boot()
+
 
     /**
      * Register the application services.
@@ -37,5 +43,8 @@ class EmailExceptionsServiceProvider extends ServiceProvider
             __DIR__.'/config/laravelEmailExceptions.php',
             'laravelEmailExceptions'
         );
-    }
-}
+
+    }//end register()
+
+
+}//end class

@@ -17,10 +17,6 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
  */
 class EmailHandler extends ExceptionHandler
 {
-    /**
-     * @var $agent Agent
-     */
-    protected $agent;
 
     /**
      * @var string global throttle cache key
@@ -31,6 +27,7 @@ class EmailHandler extends ExceptionHandler
      * @var null|string throttle cache key
      */
     protected $throttleCacheKey = null;
+
 
     /**
      * Report or log an exception.
@@ -117,21 +114,20 @@ class EmailHandler extends ExceptionHandler
     protected function mailException(Throwable $exception)
     {
         $data = [
-            'exception' => $exception,
-            'toEmail'   => config('laravelEmailExceptions.ErrorEmail.toEmailAddress'),
-            'fromEmail' => config('laravelEmailExceptions.ErrorEmail.fromEmailAddress'),
-            'request'   => request(),
-            'agent'     => new Agent(),
-            'user'      => auth()->check() ? auth()->user() : null,
-        ];
+                 'exception' => $exception,
+                 'toEmail'   => config('laravelEmailExceptions.ErrorEmail.toEmailAddress'),
+                 'fromEmail' => config('laravelEmailExceptions.ErrorEmail.fromEmailAddress'),
+                 'request'   => request(),
+                 'agent'     => new Agent(),
+                 'user'      => auth()->check() ? auth()->user() : null,
+                ];
 
         Mail::send(
             'laravelEmailExceptions::emailException',
             $data,
             function ($message) {
 
-                $default = 'An Exception has been thrown on '.
-                config('app.name', 'unknown').' ('.config('app.env', 'unknown').')';
+                $default = 'An Exception has been thrown on '.config('app.name', 'unknown').' ('.config('app.env', 'unknown').')';
                 $subject = config('laravelEmailExceptions.ErrorEmail.emailSubject') ?: $default;
 
                 $message->from(config('laravelEmailExceptions.ErrorEmail.fromEmailAddress'))
@@ -190,8 +186,8 @@ class EmailHandler extends ExceptionHandler
 
                 // if we're just making the cache key now we are not global throttling yet
                 return false;
-            }
-        }
+            }//end if
+        }//end if
     }
 
     /**
@@ -232,7 +228,7 @@ class EmailHandler extends ExceptionHandler
                 // report that we do not need to throttle as its not been reported within the last throttle period
                 return false;
             }
-        }
+        }//end if
     }
 
     /**
@@ -316,7 +312,7 @@ class EmailHandler extends ExceptionHandler
      * @return DateTime
      * @throws Exception
      */
-    protected function getDateTimeMinutesFromNow($minutesToAdd = 0)
+    protected function getDateTimeMinutesFromNow($minutesToAdd=0)
     {
         $now = new DateTime();
 

@@ -1,6 +1,6 @@
 # Laravel 8.x Email Exceptions
-[![Build Status](https://api.travis-ci.org/abrigham1/laravel-email-exceptions.png?branch=master)](https://travis-ci.org/abrigham1/laravel-email-exceptions)
-[![Coverage Status](https://img.shields.io/codecov/c/github/abrigham1/laravel-email-exceptions/master.svg)](https://codecov.io/github/abrigham1/laravel-email-exceptions?branch=master)
+[![Build Status](https://api.travis-ci.org/berndengels/laravel8-email-exceptions.png?branch=master)](https://travis-ci.org/berndengels/laravel8-email-exceptions)
+[![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/abrigham1/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
 The Laravel 8 Email Exceptions package, based on Laravel 5 package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
@@ -77,7 +77,7 @@ In your .env file please set values for:
 - EXCEPTION_EMAIL_SUBJECT
 
 * email (bool) - Enable or disable emailing of errors/exceptions
-* dontEmail (array) - This works exactly like laravel's $dontReport variable documented here: https://laravel.com/docs/5.4/errors#the-exception-handler under Ignoring Exceptions By Type. Keep in mind also any exceptions under laravel's $dontReport also will not be emailed
+* dontEmail (array) - This works exactly like laravel's $dontReport variable documented here: https://laravel.com/docs/8.x/errors#the-exception-handler under Ignoring Exceptions By Type. Keep in mind also any exceptions under laravel's $dontReport also will not be emailed
 * throttle (bool) - Enable or disable throttling of exception emails. Throttling is only performed if its been determined the exact same exception/error has already been emailed by checking the cache. Errors/Exceptions are determined to be unique by exception class + exception message + exception code
 * throttleCacheDriver (string) - The cache driver to use for throttling, by default it uses CACHE_DRIVER from your env file
 * throttleDurationMinutes (int) - The duration in minutes of the throttle for example if you put 5 and a BadMethodCallException triggers an email if that same exception is thrown again it will not be emailed until 5 minutes have passed
