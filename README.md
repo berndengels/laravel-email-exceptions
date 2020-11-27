@@ -74,8 +74,8 @@ Default configuration:
 ]
 ```
 In your .env file please set values for:
-- EXCEPTION_TO_EMAIL_ADDRESS (one email addess or comma separeted list of email addesses)
-- EXCEPTION_FROM_EMAIL_ADDRESS (one email addess or comma separeted list of email addesses)
+- EXCEPTION_TO_EMAIL_ADDRESS (one email address or comma separated list of email addresses)
+- EXCEPTION_FROM_EMAIL_ADDRESS (one email address or comma separated list of email addresses)
 - EXCEPTION_EMAIL_SUBJECT (string)
 
 * email (bool) - Enable or disable emailing of errors/exceptions
