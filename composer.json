@@ -43,13 +43,10 @@
         }
     },
     "scripts": {
-        "run-tests": "./vendor/bin/phpunit"
+        "run-tests": "./vendor/bin/phpunit",
     },
     "repositories": {
-        "private-packagist": {
-            "type": "composer",
-            "url": "https://repo.packagist.com/berndengels/"
-        },
-        "packagist.org": false
+        "packagist.org": true,
+        "private-packagist": false
     }
 }
