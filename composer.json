@@ -44,9 +44,5 @@
     },
     "scripts": {
         "run-tests": "./vendor/bin/phpunit"
-    },
-    "repositories": {
-        "packagist.org": true,
-        "private-packagist": false
     }
 }
