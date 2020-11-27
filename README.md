@@ -1,5 +1,5 @@
 # Laravel 8.x Email Exceptions
-[![Build Status](https://api.travis-ci.org/berndengels/laravel8-email-exceptions.png?branch=master)](https://travis-ci.org/berndengels/laravel8-email-exceptions)
+[![Build Status](https://api.travis-ci.org/berndengels/laravel8-email-exceptions.png?branch=v1.0.1)](https://travis-ci.org/berndengels/laravel8-email-exceptions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/abrigham1/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
