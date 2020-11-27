@@ -1,12 +1,16 @@
 # Laravel 8.x Email Exceptions
-[![Build Status](https://api.travis-ci.org/berndengels/laravel8-email-exceptions.svg?branch=v1.0.1)](https://travis-ci.org/berndengels/laravel8-email-exceptions)
-[![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/abrigham1/laravel-email-exceptions?branch=master)
+[![Build Status](https://travis-ci.com/berndengels/laravel8-email-exceptions.svg?branch=master)](https://travis-ci.com/berndengels/laravel8-email-exceptions)
+[![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-The Laravel 8 Email Exceptions package, based on Laravel 5 package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
+The Laravel 8 Email Exceptions package, based on [Aaron Brigham's](https://github.com/abrigham1/laravel-email-exceptions) Laravel 5 package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
 to themselves whenever an exception is thrown in their application. Information provided by default is:
 * Environment
-* Exception/Error Url
+* Exception/Error Remote Url
+* Exception/Error Remote IP
+* Exception/Error Data Dump of Request
+* User Name and Email, if authenticated
+* UserAgent of Browser
 * Exception/Error Class
 * Exception/Error Message
 * Exception/Error Code
@@ -28,7 +32,7 @@ to themselves whenever an exception is thrown in their application. Information 
 * [License](#license)
 
 ## Installation
-You can install this plugin into your laravel 5.x application using [composer](http://getcomposer.org).
+You can install this plugin into your laravel 8.x application using [composer](http://getcomposer.org).
 
 Run the following command
 ```bash
@@ -64,15 +68,15 @@ Default configuration:
     'globalThrottle' => true,
     'globalThrottleLimit' => 20,
     'globalThrottleDurationMinutes' => 30,
-    'toEmailAddress'    => env('EXCEPTION_TO_EMAIL_ADDRESS', null),
-    'fromEmailAddress'  => env('EXCEPTION_FROM_EMAIL_ADDRESS', null),
+    'toEmailAddress'    => explode(',', env('EXCEPTION_TO_EMAIL_ADDRESS', [])),
+    'fromEmailAddress'  => explode(',', env('EXCEPTION_FROM_EMAIL_ADDRESS', [])),
     'emailSubject'      => env('EXCEPTION_EMAIL_SUBJECT', null)
 ]
 ```
 In your .env file please set values for:
-- EXCEPTION_TO_EMAIL_ADDRESS
-- EXCEPTION_FROM_EMAIL_ADDRESS
-- EXCEPTION_EMAIL_SUBJECT
+- EXCEPTION_TO_EMAIL_ADDRESS (one email addess or comma separeted list of email addesses)
+- EXCEPTION_FROM_EMAIL_ADDRESS (one email addess or comma separeted list of email addesses)
+- EXCEPTION_EMAIL_SUBJECT (string)
 
 * email (bool) - Enable or disable emailing of errors/exceptions
 * dontEmail (array) - This works exactly like laravel's $dontReport variable documented here: https://laravel.com/docs/8.x/errors#the-exception-handler under Ignoring Exceptions By Type. Keep in mind also any exceptions under laravel's $dontReport also will not be emailed
@@ -159,7 +163,7 @@ MAIL_ENCRYPTION=null
 ```
 
 ## Bugs and Feedback
-http://github.com/berndengels/laravel-email-exceptions/issues
+http://github.com/berndengels/laravel8-email-exceptions/issues
 
 ## License
 Copyright (c) 2017 Aaron Brigham, 2020 Bernd Engels
