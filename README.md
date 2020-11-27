@@ -3,7 +3,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-The Laravel 8 Email Exceptions package, based on [Aaron Brigham's](https://github.com/abrigham1/laravel-email-exceptions) Laravel 5 package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
+The Laravel 8 Email Exceptions package, based on [Aaron Brigham's](https://github.com/abrigham1/laravel-email-exceptions) Laravel 5.x package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
 to themselves whenever an exception is thrown in their application. Information provided by default is:
 * Environment
 * Exception/Error Remote Url
