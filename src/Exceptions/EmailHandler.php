@@ -28,7 +28,6 @@ class EmailHandler extends ExceptionHandler
      */
     protected $throttleCacheKey = null;
 
-
     /**
      * Report or log an exception.
      *

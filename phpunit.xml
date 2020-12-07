@@ -17,6 +17,10 @@
         <include>
             <directory suffix=".php">./src/Exceptions</directory>
         </include>
+        <report>
+            <!--html outputDirectory="build/coverage"/-->
+            <text outputFile="php://stdout"/>
+        </report>
     </coverage>
     <php>
         <env name="APP_ENV" value="testing"/>

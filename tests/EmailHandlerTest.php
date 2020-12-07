@@ -78,8 +78,7 @@ class EmailHandlerTest extends TestCase
 
         // function should return void so assertNull
         $actual = $this->emailHandlerMock->report($exception);
-        $this->assertNull($actual);
-        echo __FUNCTION__.": assert Null => actual: $actual\n";
+        $this->assertNull($actual, __FUNCTION__.": assert Null => actual: $actual\n");
     }
 
 /**
@@ -208,8 +207,7 @@ class EmailHandlerTest extends TestCase
 
         // check if actual = our expected value
         $actual = $this->emailHandlerMock->shouldMail($exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__.": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__.": assert Equals expected: $expected, actual: $actual");
     }
 
 /**
@@ -543,8 +541,7 @@ class EmailHandlerTest extends TestCase
 
         // check our expected against our actual
         $actual = $this->emailHandlerMock->globalThrottle();
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }
 
 /**
@@ -701,8 +698,7 @@ class EmailHandlerTest extends TestCase
 
         // check if our actual = expected
         $actual = $this->emailHandlerMock->throttle($exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }
 
 /**
@@ -757,8 +753,7 @@ class EmailHandlerTest extends TestCase
     {
         // check if actual = expected
         $actual = $this->emailHandlerMock->getThrottleCacheKey($exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }//end throttleProvider()
 
 /**
@@ -796,8 +791,7 @@ class EmailHandlerTest extends TestCase
     {
         // check if actual = expected
         $actual = $this->emailHandlerMock->isInList($list, $exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }//end getThrottleCacheKeyProvider()
 
 /**
@@ -844,8 +838,7 @@ class EmailHandlerTest extends TestCase
 
         // check if actual is = to expected
         $actual = $this->emailHandlerMock->isInDontThrottleList($exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }//end isInListProvider()
 
 /**
@@ -894,8 +887,7 @@ class EmailHandlerTest extends TestCase
 
         // check if actual is = to expected
         $actual = $this->emailHandlerMock->isInDontEmailList($exception);
-        $this->assertEquals($expected, $actual);
-        echo __FUNCTION__. ": assert Equals expected: $expected, actual: $actual";
+        $this->assertEquals($expected, $actual, __FUNCTION__. ": assert Equals expected: $expected, actual: $actual");
     }//end isInDontThrottleListProvider()
 
 /**
