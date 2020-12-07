@@ -68,14 +68,14 @@ Default configuration:
     'globalThrottle' => true,
     'globalThrottleLimit' => 20,
     'globalThrottleDurationMinutes' => 30,
-    'toEmailAddress'    => explode(',', env('EXCEPTION_TO_EMAIL_ADDRESS', [])),
-    'fromEmailAddress'  => explode(',', env('EXCEPTION_FROM_EMAIL_ADDRESS', [])),
+    'toEmailAddress'    => explode(',', env('EXCEPTION_TO_EMAIL_ADDRESS', null)) ?? null,
+    'fromEmailAddress'  => env('EXCEPTION_FROM_EMAIL_ADDRESS', null),
     'emailSubject'      => env('EXCEPTION_EMAIL_SUBJECT', null)
 ]
 ```
 In your .env file please set values for:
 - EXCEPTION_TO_EMAIL_ADDRESS (one email address or comma separated list of email addresses)
-- EXCEPTION_FROM_EMAIL_ADDRESS (one email address or comma separated list of email addresses)
+- EXCEPTION_FROM_EMAIL_ADDRESS (string)
 - EXCEPTION_EMAIL_SUBJECT (string)
 
 * email (bool) - Enable or disable emailing of errors/exceptions
@@ -109,7 +109,7 @@ Update your config values in **config/laravelEmailExceptions.php**
     'globalThrottle' => true,
     'globalThrottleLimit' => 20,
     'globalThrottleDurationMinutes' => 30,
-    'toEmailAddress' => env('EXCEPTION_TO_EMAIL_ADDRESS', 'dev@yoursite.com'),
+    'toEmailAddress' => explode(',', env('EXCEPTION_TO_EMAIL_ADDRESS', 'dev@yoursite.com')),
     'fromEmailAddress' => env('EXCEPTION_FROM_EMAIL_ADDRESS', 'noreply@yoursite.com'),
     'emailSubject' => env('EXCEPTION_EMAIL_SUBJECT', null),
 ]
