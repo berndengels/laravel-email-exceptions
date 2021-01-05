@@ -2,6 +2,5 @@
 .idea
 .editorconfig
 .DStore
-/composer.lock
 /.phpunit.result.cache
 /update-gist
