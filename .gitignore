@@ -4,3 +4,5 @@
 .DStore
 /.phpunit.result.cache
 /update-gist
+/.travis.yml.bak
+/composer.lock
