@@ -47,13 +47,13 @@
                                     <td>{!! $agent->robot() !!}</td>
                                 </tr>
                             @endif
-                            @endif
-                            @if($user)
+                        @endif
+                        @if($user)
                             <tr>
                                 <td><strong>User:</strong></td>
                                 <td><strong>{{ $user->name ?? ($user->username ?? null) }} <a href="mailto:{{ $user->email }}" target="_blank">{{ $user->email }}</a></strong></td>
                             </tr>
-                            @endif
+                        @endif
                             <tr>
                                 <td><strong>Exception Class:</strong></td>
                                 <td>{{ get_class($exception) }}</td>

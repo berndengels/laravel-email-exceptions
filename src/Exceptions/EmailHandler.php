@@ -2,8 +2,8 @@
 
 namespace Bengels\LaravelEmailExceptions\Exceptions;
 
-use DateTime;
 use Mail;
+use DateTime;
 use Throwable;
 use Exception;
 use Jenssegers\Agent\Agent;
@@ -17,7 +17,6 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
  */
 class EmailHandler extends ExceptionHandler
 {
-
     /**
      * @var string global throttle cache key
      */
