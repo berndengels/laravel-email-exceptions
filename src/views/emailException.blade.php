@@ -39,7 +39,7 @@
                         @if($agent)
                             <tr>
                                 <td><strong>UserAgent:</strong></td>
-                                <td>{!! $agend->getUserAgent() !!}</td>
+                                <td>{!! $agent->getUserAgent() !!}</td>
                             </tr>
                             @if($agent->isRobot())
                                 <tr>
