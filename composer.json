@@ -1,8 +1,8 @@
 {
-    "name": "berndengels/laravel8-email-exceptions",
-    "description": "Email Exceptions from your laravel v8 application",
+    "name": "berndengels/laravel-email-exceptions",
+    "description": "Email Exceptions from your laravel v7,v8,v9 application",
     "license": "MIT",
-    "keywords": ["email", "exception", "laravel", "laravel-8-package", "exception-handling", "debugging"],
+    "keywords": ["email", "exception", "laravel", "laravel-7", "laravel-8", "laravel-9", "exception-handling", "debugging"],
     "authors": [
         {
             "name": "Aaron Brigham",
@@ -16,8 +16,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4|^8.0",
-        "illuminate/support": "^7.0|^8.0",
-        "jenssegers/agent": "^2.6"
+        "illuminate/support": "^7.0|^8.0|^9.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.3.1",

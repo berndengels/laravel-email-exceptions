@@ -1,9 +1,9 @@
-# Laravel 8.x Email Exceptions
-[![Build Status](https://travis-ci.com/berndengels/laravel8-email-exceptions.svg?branch=master)](https://travis-ci.com/berndengels/laravel8-email-exceptions)
-[![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel8-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
+# Laravel 7.x/8.x/9.x Email Exceptions
+[![Build Status](https://travis-ci.com/berndengels/laravel-email-exceptions.svg?branch=master)](https://travis-ci.com/berndengels/laravel-email-exceptions)
+[![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-The Laravel 8 Email Exceptions package, based on [Aaron Brigham's](https://github.com/abrigham1/laravel-email-exceptions) Laravel 5.x package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
+The "Laravel Email Exceptions" package, based on [Aaron Brigham's](https://github.com/abrigham1/laravel-email-exceptions) Laravel 5.x package (https://github.com/abrigham1/laravel-email-exceptions), is designed to give developers an easy way to email debug information
 to themselves whenever an exception is thrown in their application. Information provided by default is:
 * Environment
 * Exception/Error Remote Url
