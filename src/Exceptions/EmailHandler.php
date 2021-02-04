@@ -20,7 +20,7 @@ class EmailHandler extends ExceptionHandler
     /**
      * @var string global throttle cache key
      */
-    protected $globalThrottleCacheKey = "email_exception_global";
+    protected $globalThrottleCacheKey = 'email_exception_global';
 
     /**
      * @var null|string throttle cache key
@@ -242,7 +242,7 @@ class EmailHandler extends ExceptionHandler
             // make up the cache key from a prefix, exception class, exception message, and exception code
             // with all special characters removed
             $this->throttleCacheKey = preg_replace(
-                "/[^A-Za-z0-9]/",
+                '/[^A-Za-z0-9]/',
                 '',
                 'laravelEmailException'.get_class($exception).$exception->getMessage().$exception->getCode()
             );
