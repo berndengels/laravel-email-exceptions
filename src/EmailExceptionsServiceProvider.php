@@ -5,11 +5,11 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class EmailExceptionsServiceProvider
+ *
  * @package Bengels\LaravelEmailExceptions
  */
 class EmailExceptionsServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap the application services.
      *
