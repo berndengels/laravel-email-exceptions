@@ -2,7 +2,16 @@
     "name": "berndengels/laravel-email-exceptions",
     "description": "Email Exceptions from your laravel v7,v8,v9 application",
     "license": "MIT",
-    "keywords": ["email", "exception", "laravel", "laravel-7", "laravel-8", "laravel-9", "exception-handling", "debugging"],
+    "keywords": [
+        "email",
+        "exception",
+        "laravel",
+        "laravel-7",
+        "laravel-8",
+        "laravel-9",
+        "exception-handling",
+        "debugging"
+    ],
     "authors": [
         {
             "name": "Aaron Brigham",
@@ -13,9 +22,22 @@
             "email": "engels@f50.de"
         }
     ],
+    "repositories": {
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/berndengels/"
+        },
+        "0": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/berndengels/"
+        },
+        "packagist.org": false
+    },
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4|^8.0",
+        "org/pkg1": "^1.0",
+        "org/pkg2": "dev-master",
         "illuminate/support": "^7.0|^8.0|^9.0",
         "jenssegers/agent": "^2.6"
     },
