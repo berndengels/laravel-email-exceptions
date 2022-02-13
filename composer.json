@@ -25,11 +25,11 @@
     "repositories": {
         "private-packagist": {
             "type": "composer",
-            "url": "https://repo.packagist.com/berndengels/"
+            "url": "https://packagist.com/orgs/berndengels/packages/2997756"
         },
         "0": {
             "type": "composer",
-            "url": "https://repo.packagist.com/berndengels/"
+            "url": "https://packagist.com/orgs/berndengels/packages/2997756"
         },
         "packagist.org": false
     },
