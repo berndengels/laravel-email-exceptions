@@ -1,4 +1,4 @@
-# Laravel 7.x/8.x/9.x Email Exceptions
+# Laravel Email Exceptions
 [![Build Status](https://travis-ci.com/berndengels/laravel-email-exceptions.svg?branch=master)](https://travis-ci.com/berndengels/laravel-email-exceptions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
@@ -32,11 +32,11 @@ to themselves whenever an exception is thrown in their application. Information 
 * [License](#license)
 
 ## Installation
-You can install this plugin into your laravel 8.x application using [composer](http://getcomposer.org).
+You can install this plugin into your laravel 8.x/9.x application using [composer](http://getcomposer.org).
 
 Run the following command
 ```bash
-composer require berndengels/laravel8-email-exceptions
+composer require berndengels/laravel-email-exceptions
  ```
 Then in app/Exceptions/Handler.php replace
 ```php
