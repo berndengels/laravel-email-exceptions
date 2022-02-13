@@ -1,4 +1,5 @@
 # Laravel Email Exceptions
+[![Build Status](https://travis-ci.com/berndengels/laravel-email-exceptions.svg?branch=master)](https://travis-ci.com/berndengels/laravel-email-exceptions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/berndengels/laravel-email-exceptions/master.svg)](https://codecov.io/github/berndengels/laravel-email-exceptions?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
