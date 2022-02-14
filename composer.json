@@ -23,24 +23,8 @@
         }
     ],
     "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type":"package",
-            "package": {
-                "name": "berndengels/laravel-email-exceptions",
-                "version":"master",
-                "source": {
-                    "url": "https://github.com/berndengels/laravel-email-exceptions.git",
-                    "type": "git",
-                    "reference":"master"
-                }
-            }
-        }
-    ],
     "require": {
         "php": ">=7.4|^8.0",
-        "org/pkg1": "^1.0",
-        "org/pkg2": "dev-master",
         "illuminate/support": "^7.0|^8.0|^9.0",
         "jenssegers/agent": "^2.6"
     },
