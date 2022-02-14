@@ -22,17 +22,6 @@
             "email": "engels@f50.de"
         }
     ],
-    "repositories": {
-        "private-packagist": {
-            "type": "composer",
-            "url": "https://packagist.com/orgs/berndengels/"
-        },
-        "0": {
-            "type": "composer",
-            "url": "https://packagist.com/orgs/berndengels/"
-        },
-        "packagist.org": false
-    },
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4|^8.0",
