@@ -8,7 +8,7 @@ to themselves whenever an exception is thrown in their application. Information 
 * Exception/Error Remote Url
 * Exception/Error Remote IP
 * Exception/Error Data Dump of Request
-* User Name and Email, if authenticated
+* User Name and Email, if a user is authenticated
 * UserAgent of Browser
 * Exception/Error Class
 * Exception/Error Message
