@@ -39,6 +39,7 @@ return [
  *   Default Subject: An Exception has been thrown on APP_URL APP_ENV
  */
     'ErrorEmail' => [
+         'view'                          => 'laravelEmailExceptions::email-exception',
          'email'                         => env('EXCEPTION_EMAIL_ENABLED', true),
          'dontEmail'                     => [],
          'throttle'                      => true,

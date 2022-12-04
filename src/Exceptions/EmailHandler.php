@@ -121,7 +121,7 @@ class EmailHandler extends ExceptionHandler
                 ];
 
         Mail::send(
-            'email-exceptions::email-exception',
+            config('email-exception.ErrorEmail.view'),
             $data,
             function ($message) {
                 $default = 'An Exception has been thrown on '.config('app.name', 'unknown').' ('.config('app.env', 'unknown').')';

@@ -17,7 +17,7 @@ class EmailExceptionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'email-exception');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'laravelEmailExceptions');
         $this->publishes(
             [__DIR__.'/config/email-exception.php' => config_path('email-exception.php')],
             'config'
