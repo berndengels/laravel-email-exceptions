@@ -39,7 +39,7 @@ return [
 *   Default Subject: An Exception has been thrown on APP_URL APP_ENV
 */
 'ErrorEmail' => [
-     'email'                         => true,
+     'email'                         => env('EXCEPTION_EMAIL_ENABLED', true),
      'dontEmail'                     => [],
      'throttle'                      => true,
      'throttleCacheDriver'           => env('CACHE_DRIVER', 'file'),
