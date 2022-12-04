@@ -1,6 +1,6 @@
 /vendor
-.idea
-.editorconfig
+/.idea
+/.editorconfig
 .DStore
 /.phpunit.result.cache
 /update-gist
