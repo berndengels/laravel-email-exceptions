@@ -23,7 +23,7 @@ class EmailExceptionsServiceProvider extends ServiceProvider
             'config'
         );
         $this->publishes(
-            [__DIR__.'/views' => resource_path('views/vendor/email-exception')],
+            [__DIR__.'/resources/views' => resource_path('views/vendor/email-exception')],
             'views'
         );
     }
