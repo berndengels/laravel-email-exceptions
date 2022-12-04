@@ -285,7 +285,6 @@ class EmailHandler extends ExceptionHandler
     protected function isInDontThrottleList(Throwable $exception)
     {
         $dontThrottleList = config('email-exception.ErrorEmail.dontThrottle');
-
         return $this->isInList($dontThrottleList, $exception);
     }
 
@@ -298,7 +297,6 @@ class EmailHandler extends ExceptionHandler
     protected function isInDontEmailList(Throwable $exception)
     {
         $dontEmailList = config('email-exception.ErrorEmail.dontEmail');
-
         return $this->isInList($dontEmailList, $exception);
     }
 
@@ -312,7 +310,6 @@ class EmailHandler extends ExceptionHandler
     protected function getDateTimeMinutesFromNow($minutesToAdd = 0)
     {
         $now = new DateTime();
-
         return $now->modify("+{$minutesToAdd} minutes");
     }
 }
