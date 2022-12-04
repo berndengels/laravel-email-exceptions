@@ -46,7 +46,7 @@ class EmailHandlerTest extends TestCase
         $exception = new Exception('Test Exception');
 
         // set up config value
-        config(['laravelEmailExceptions.ErrorEmail.email' => false]);
+        config(['email-exception.ErrorEmail.email' => false]);
 
         // we expect the email handler to receive should mail
         // and return true
@@ -125,9 +125,9 @@ class EmailHandlerTest extends TestCase
         // setting our config values from our data provider
         config(
             [
-                'laravelEmailExceptions.ErrorEmail.email' => $email,
-                'laravelEmailExceptions.ErrorEmail.toEmailAddress' => $toEmailAddress,
-                'laravelEmailExceptions.ErrorEmail.fromEmailAddress' => $fromEmailAddress,
+                'email-exception.ErrorEmail.email' => $email,
+                'email-exception.ErrorEmail.toEmailAddress' => $toEmailAddress,
+                'email-exception.ErrorEmail.fromEmailAddress' => $fromEmailAddress,
             ]
         );
 
@@ -414,9 +414,9 @@ class EmailHandlerTest extends TestCase
         // setting up config values
         config(
             [
-                'laravelEmailExceptions.ErrorEmail.toEmailAddress' => 'dev@example.com',
-                'laravelEmailExceptions.ErrorEmail.fromEmailAddress' => 'dev2@example.com',
-                'laravelEmailExceptions.ErrorEmail.subject' => $subject,
+                'email-exception.ErrorEmail.toEmailAddress' => 'dev@example.com',
+                'email-exception.ErrorEmail.fromEmailAddress' => 'dev2@example.com',
+                'email-exception.ErrorEmail.subject' => $subject,
             ]
         );
 
@@ -472,10 +472,10 @@ class EmailHandlerTest extends TestCase
         // set up the config values from data provider
         config(
             [
-                'laravelEmailExceptions.ErrorEmail.globalThrottle' => $globalThrottle,
-                'laravelEmailExceptions.ErrorEmail.throttleCacheDriver' => $throttleCacheDriver,
-                'laravelEmailExceptions.ErrorEmail.globalThrottleLimit' => $globalThrottleLimit,
-                'laravelEmailExceptions.ErrorEmail.globalThrottleDurationMinutes' => $globalThrottleDurationMinutes,
+                'email-exception.ErrorEmail.globalThrottle' => $globalThrottle,
+                'email-exception.ErrorEmail.throttleCacheDriver' => $throttleCacheDriver,
+                'email-exception.ErrorEmail.globalThrottleLimit' => $globalThrottleLimit,
+                'email-exception.ErrorEmail.globalThrottleDurationMinutes' => $globalThrottleDurationMinutes,
             ]
         );
 
@@ -617,9 +617,9 @@ class EmailHandlerTest extends TestCase
         // set up the config
         config(
             [
-                'laravelEmailExceptions.ErrorEmail.throttle' => $throttle,
-                'laravelEmailExceptions.ErrorEmail.throttleCacheDriver' => $throttleCacheDriver,
-                'laravelEmailExceptions.ErrorEmail.throttleDurationMinutes' => $throttleDurationMinutes,
+                'email-exception.ErrorEmail.throttle' => $throttle,
+                'email-exception.ErrorEmail.throttleCacheDriver' => $throttleCacheDriver,
+                'email-exception.ErrorEmail.throttleDurationMinutes' => $throttleDurationMinutes,
             ]
         );
 
@@ -766,15 +766,15 @@ class EmailHandlerTest extends TestCase
         return [
             'Exception 1' => [
                 new Exception('Test-Exception', 1),
-                'laravelEmailExceptionExceptionTestException1',
+                'emailExceptionExceptionTestException1',
             ],
             'Exception 2' => [
                 new Exception('Test$Some Exception', 2),
-                'laravelEmailExceptionExceptionTestSomeException2',
+                'emailExceptionExceptionTestSomeException2',
             ],
             'Exception 3' => [
                 new BadMethodCallException('Test-Third_Exception', 3),
-                'laravelEmailExceptionBadMethodCallExceptionTestThirdException3',
+                'emailExceptionBadMethodCallExceptionTestThirdException3',
             ],
         ];
     }//end testGetThrottleCacheKey()
@@ -827,7 +827,7 @@ class EmailHandlerTest extends TestCase
     public function testIsInDontThrottleList($exception, $dontThrottleList, $isInListReturn, $expected)
     {
         // set up config values
-        config(['laravelEmailExceptions.ErrorEmail.dontThrottle' => $dontThrottleList]);
+        config(['email-exception.ErrorEmail.dontThrottle' => $dontThrottleList]);
 
         // we should receive a call to is in list
         $this->emailHandlerMock
@@ -876,7 +876,7 @@ class EmailHandlerTest extends TestCase
     public function testIsInDontEmailList($exception, $dontEmailList, $isInListReturn, $expected)
     {
         // set up config values
-        config(['laravelEmailExceptions.ErrorEmail.dontEmail' => $dontEmailList]);
+        config(['email-exception.ErrorEmail.dontEmail' => $dontEmailList]);
 
         // we should receive a call to is in list
         $this->emailHandlerMock
