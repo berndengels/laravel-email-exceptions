@@ -1,6 +1,6 @@
 {
     "name": "berndengels/laravel-email-exceptions",
-    "description": "Email Exceptions from your laravel v7,v8,v9 application",
+    "description": "Email Exceptions from your laravel v7,v8,v9,v10 application",
     "license": "MIT",
     "keywords": [
         "email",
@@ -9,6 +9,7 @@
         "laravel-7",
         "laravel-8",
         "laravel-9",
+        "laravel-10",
         "exception-handling",
         "debugging"
     ],
@@ -26,7 +27,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4|^8.0",
-        "illuminate/support": "^7.0|^8.0|^9.0",
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
         "jenssegers/agent": "^2.6"
     },
     "require-dev": {
